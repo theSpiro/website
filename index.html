@@ -8,35 +8,10 @@
     </head>
     <body>
         <div class="name">Spyridon Spyrou</div>
-        <div class="typing-cont">
-            <span id="typing"></span>
-            <span class="cursor"></span>
+        <div class="role">
+            <div>
+                <p>Software Engineer</p>
+            </div>
         </div>
-        <script>
-            const text = "Software Engineer";
-            const speed = 100
-            let index = 0
-
-            function typeLetter() {
-                if(index < text.length){
-                    document.getElementById("typing").textContent += text.charAt(index);
-                    index++;
-                    setTimeout(typeLetter, speed);
-                } else {
-                    document.querySelector(".cursor").style.display = "none";
-                }
-            }
-
-            function showCursor() {
-                document.querySelector(".cursor").style.visibility = "visible";
-            }
-
-            document.querySelector(".cursor").style.visibility = "hidden";
-
-            setTimeout(() => {
-                showCursor();
-                typeLetter();
-            }, 2000);
-        </script>
     </body>
 </html>
