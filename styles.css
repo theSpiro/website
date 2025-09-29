@@ -4,7 +4,8 @@
     margin-top: 25%;
     font-size: 64px;
     font-family: Arial, Helvetica, sans-serif;
-    animation: name ease 1s 1 normal both;
+    animation: name ease 1s 1 normal both,
+    opac 0.8s ease-in 3.5s forwards;
 }
 
 .role {
@@ -23,8 +24,14 @@
     width: 0;
     animation: 
     show 0s ease 1s forwards,
-    role 1.5s steps(15) 1s forwards,
-    blink 0.8s steps(1, start) 4 2.5s forwards;
+    role 1s steps(15) 1s forwards,
+    blink 0.8s steps(1, start) 4 2.5s forwards,
+    opac 0.8s ease-in 3.5s forwards;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
 }
 
 @keyframes name {
@@ -34,7 +41,7 @@
     } 
 }
 
-@keyframes show{
+@keyframes show {
     to {
         visibility: visible;
     }
@@ -57,5 +64,11 @@
     }
     0%, 100% {
         border-color: transparent;
+    }
+}
+
+@keyframes opac {
+    to {
+        opacity: 0;
     }
 }
